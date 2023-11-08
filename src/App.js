@@ -1,6 +1,8 @@
+import {HomePage} from "./Layouts/HomePage";
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <HomePage></HomePage>
     </div>
   );
 }
