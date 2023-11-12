@@ -1,5 +1,11 @@
+import GlassList from "./Glasses/GlassList";
+
 export default function Content() {
     return (
-        <div className="container text-center mt-5 mb-5">Content Here</div>
+        <div className="wrapper mt-5 mb-5 w-50 m-auto bg-white px-3 py-5 border border-1 border-black">
+            <div className="d-flex">
+                <GlassList />
+            </div>
+        </div>
     )
 }

@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg {
+  position: relative;
+}
+.bg:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./../public/glassesImages/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.25;
+  filter: grayscale(0.75);
+  z-index: -1;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+}
+
+.selectedPreview {
+  position: absolute;
+  display: block;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 99;
+  opacity: 0.75;
+}
+.product__item {
+  padding: 15px;
+  border-radius: 10px;
+}
+.product__item:hover {
+  color: white;
+  cursor: pointer;
+  background-color: chocolate;
+  opacity: 0.75;
+}
