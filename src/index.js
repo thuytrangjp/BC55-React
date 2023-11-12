@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/js/bootstrap.min';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,4 +19,3 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-import 'bootstrap/dist/js/bootstrap.min';
