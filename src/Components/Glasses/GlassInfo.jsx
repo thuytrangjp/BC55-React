@@ -10,7 +10,7 @@ export default function GlassInfo({name, price, desc, onBtnClick}) {
                         <p><strong>Description:</strong>
                             <p>{desc}</p>
                         </p>
-                        <button className="btn btn-primary" onClick={() => onBtnClick({})}>Remove from Review</button>
+                        <button className="btn btn-primary" onClick={() => onBtnClick({})}>Remove from Preview</button>
                     </div>
                 )
                 : <p>Please select one</p>
