@@ -1,12 +1,9 @@
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Content from "./Components/Content";
+import ShoesStore from "./Components/ShoesStore/ShoesStore";
 function App() {
+
   return (
     <div className="App">
-      <Header />
-      <Content />
-      <Footer />
+      <ShoesStore />
     </div>
   );
 }

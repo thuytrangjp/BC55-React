@@ -1,17 +1,19 @@
 import React from 'react';
-import shoesStore from '../../../Data/shoes.json'
 import ProductItem from "./ProductItem";
 
-function ProductList({action}) {
+function ProductList({productItems, action}) {
     return (
-        <div className="row">
-            {
-                shoesStore.map((shoes) => {
-                    return (
-                        <ProductItem key={shoes.id} item={shoes} action={action} />
-                    )
-                })
-            }
+        <div className="my-5 container">
+            <h1 className="text-center">Shoes Store</h1>
+            <div className="row">
+                {
+                    productItems.map((item) => {
+                        return (
+                            <ProductItem key={item.id} item={item} action={action} />
+                        )
+                    })
+                }
+            </div>
         </div>
     );
 }

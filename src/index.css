@@ -20,3 +20,8 @@
   border-color: #FFF;
   transition: all 0.5s;
 }
+
+#my-cart table {
+  table-layout: fixed;
+  width: 400px
+}

@@ -1,4 +1,6 @@
-export default function Header() {
+export default function Header({action}) {
+    const { handleShowCartModal } = action;
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container px-lg-5">
@@ -12,7 +14,10 @@ export default function Header() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item"><a className="nav-link active" aria-current="page" href="#!">Home</a>
                         </li>
-                        <li className="nav-item"><a className="nav-link" href="#!">About</a></li>
+                        <li className="nav-item"><a className="nav-link"
+                            data-bs-toggle="modal" data-bs-target="#baseModal" href="#!"
+                            onClick={ handleShowCartModal }
+                        >My Cart</a></li>
                         <li className="nav-item"><a className="nav-link" href="#!">Contact</a></li>
                     </ul>
                 </div>
