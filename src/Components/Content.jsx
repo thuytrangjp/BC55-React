@@ -1,5 +1,9 @@
+import ShoesStore from "./ShoesStore/ShoesStore";
+
 export default function Content() {
     return (
-        <div className="container text-center mt-5 mb-5">Content Here</div>
+        <div className="container mt-5 mb-5">
+            <ShoesStore />
+        </div>
     )
 }
