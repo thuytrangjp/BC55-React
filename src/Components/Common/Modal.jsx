@@ -1,5 +1,5 @@
 import React from 'react';
-function Modal({props, action}) {
+export default function Modal({props, action}) {
     const { modalSettings: settings, modalContent: content } = props;
 
     if (!settings && !content) {
@@ -42,5 +42,3 @@ function Modal({props, action}) {
         </div>
     );
 }
-
-export default Modal;

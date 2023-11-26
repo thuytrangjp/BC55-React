@@ -6,22 +6,3 @@
   line-height: 20px;
 }
 
-.listItem .listItem__itemCard,
-.listItem .listItem__itemAction button {
-  cursor: pointer;
-}
-
-.listItem .listItem__itemCard:hover {
-  background-color: #C5C5C505;
-  opacity: 0.8;
-}
-
-.listItem .listItem__itemAction button:hover {
-  border-color: #FFF;
-  transition: all 0.5s;
-}
-
-#my-cart table {
-  table-layout: fixed;
-  width: 400px
-}

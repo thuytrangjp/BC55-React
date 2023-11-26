@@ -1,11 +1,13 @@
-import ShoesStore from "./Components/ShoesStore/ShoesStore";
-function App() {
-
+import React from "react";
+import Content from "./Components/Content";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+export default function App() {
   return (
     <div className="App">
-      <ShoesStore />
+        <Header />
+        <Content className="container"/>
+        <Footer />
     </div>
   );
 }
-
-export default App;
