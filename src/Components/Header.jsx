@@ -1,9 +1,7 @@
 import React from 'react';
 export default function Header({action}) {
-    const { handleShowCartModal } = action;
-
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg border-bottom mb-5">
             <div className="container px-lg-5">
                 <a className="navbar-brand align-self-center" href="#!">Thuy Trang - BC55</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -15,11 +13,8 @@ export default function Header({action}) {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item"><a className="nav-link active" aria-current="page" href="#!">Home</a>
                         </li>
-                        <li className="nav-item"><a className="nav-link"
-                            data-bs-toggle="modal" data-bs-target="#baseModal" href="#!"
-                            onClick={ handleShowCartModal }
-                        >My Cart</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#!">Contact</a></li>
+                        {/*<li className="nav-item"><a className="nav-link" href="#!">My Cart</a></li>*/}
+                        {/*<li className="nav-item"><a className="nav-link" href="#!">Contact</a></li>*/}
                     </ul>
                 </div>
             </div>
