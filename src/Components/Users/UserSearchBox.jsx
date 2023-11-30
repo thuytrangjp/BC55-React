@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 export default function UserSearchBox( { pageTitle, handleSearch, handleBoxMode }) {
     const emptyValues = {
-        id: "",
+        code: "",
         fullName: "",
         telephone: "",
         email: "",
@@ -9,15 +9,10 @@ export default function UserSearchBox( { pageTitle, handleSearch, handleBoxMode 
     const [ searchTerm, setSearchTerm ] = useState(emptyValues);
 
     const handleOnChange = (e) => {
-        let values = {};
-        switch (e.target.name) {
-            case "searchById": values = { ...searchTerm, id: e.target.value }; break;
-            case "searchByFullName": values = { ...searchTerm, fullName: e.target.value }; break;
-            case "searchByTelephone": values = { ...searchTerm, telephone: e.target.value }; break;
-            case "searchByEmail": values = { ...searchTerm, email: e.target.value }; break;
-            default: break;
-        }
-        setSearchTerm(values);
+        const { name, value } = e.target;
+        setSearchTerm((searchTerm) => {
+            return { ...searchTerm, [name]: value}
+        });
     }
 
     const handleOnClear = () => {
@@ -49,12 +44,13 @@ export default function UserSearchBox( { pageTitle, handleSearch, handleBoxMode 
                         <div className="col-6 row g-0">
                             <div className="row align-items-center">
                                 <div className="col-3">
-                                    <label>Std. No</label>
+                                    <label htmlFor="searchByCode">Std. No</label>
                                 </div>
                                 <div className="col-9">
                                     <input type="text" className="form-control"
-                                           name="searchById"
-                                           value={searchTerm.id}
+                                           name="code"
+                                           id="searchByCode"
+                                           value={searchTerm.code}
                                            onChange={handleOnChange}
                                         />
                                 </div>
@@ -63,11 +59,12 @@ export default function UserSearchBox( { pageTitle, handleSearch, handleBoxMode 
                         <div className="col-6 row g-0 justify-content-end">
                             <div className="row align-items-center">
                                 <div className="col-3">
-                                    <label>Full Name</label>
+                                    <label htmlFor="searchByFullName">Full Name</label>
                                 </div>
                                 <div className="col-9">
                                     <input type="text" className="form-control"
-                                           name="searchByFullName"
+                                           name="fullName"
+                                           id="searchByFullName"
                                            value={searchTerm.fullName}
                                            onChange={handleOnChange}
                                         />
@@ -79,11 +76,12 @@ export default function UserSearchBox( { pageTitle, handleSearch, handleBoxMode 
                         <div className="col-6 row g-0">
                             <div className="row align-items-center">
                                 <div className="col-3">
-                                    <label>Tel Phone</label>
+                                    <label htmlFor="searchByTelephone">Tel Phone</label>
                                 </div>
                                 <div className="col-9">
                                     <input type="text" className="form-control"
-                                           name="searchByTelephone"
+                                           name="telephone"
+                                           id="searchByTelephone"
                                            value={searchTerm.telephone}
                                            onChange={handleOnChange}
                                         />
@@ -93,11 +91,12 @@ export default function UserSearchBox( { pageTitle, handleSearch, handleBoxMode 
                         <div className="col-6 row g-0 justify-content-end">
                             <div className="row align-items-center">
                                 <div className="col-3">
-                                    <label>Email</label>
+                                    <label htmlFor="searchByEmail">Email</label>
                                 </div>
                                 <div className="col-9">
                                     <input type="text" className="form-control"
-                                           name="searchByEmail"
+                                           name="email"
+                                           id="searchByEmail"
                                            value={searchTerm.email}
                                            onChange={handleOnChange}
                                         />

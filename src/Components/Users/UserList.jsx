@@ -22,10 +22,10 @@ export default function UserList({users, handleBoxMode, handleSelectedUser, hand
                 {users && (
                 <tbody className="list__records">
                     {users.map(user => {
-                        const { id, fullName, telephone, email } = user;
+                        const { id, code, fullName, telephone, email } = user;
                         return (
                             <tr key={id} className="align-middle">
-                                <td className="text-center">{id}</td>
+                                <td className="text-center">{code}</td>
                                 <td>{fullName}</td>
                                 <td>{telephone}</td>
                                 <td>{email}</td>
