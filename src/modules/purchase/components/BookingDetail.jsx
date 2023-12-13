@@ -13,7 +13,7 @@ function BookingDetail({movieInfo}) {
     let { maLichChieu, hinhAnh, ngayChieu, gioChieu, ...dataset} = movieInfo;
     dataset = {...dataset, ngayGioChieu: ngayChieu + " " + gioChieu };
     const fields = ["Cụm Rạp", "Địa Chỉ", "Rạp", "Ngày Giờ Chiếu", "Tên Phim"];
-    const selectSeatNames = selectedTickets.map(item => item.tenGhe).join(", Ghế ");
+    const selectSeatNames = selectedTickets.map(item => "Ghế" + item.tenGhe).join(", ");
 
     return (
         <Grid id="booking-detail" sx={{
@@ -45,7 +45,7 @@ function BookingDetail({movieInfo}) {
                     )
                 })
             }
-            <InfoDetail field="Chọn" data={selectSeatNames ? "Ghế " + selectSeatNames : ""} />
+            <InfoDetail field="Chọn" data={selectSeatNames ? selectSeatNames : ""} />
         </Grid>
     );
 }
